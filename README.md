@@ -15,12 +15,12 @@ Este repositório tem como objetivo divulgar tutoriais detalhados, abordando des
 ## Estrutura do Repositório
 O repositório está organizado nas seguintes seções:
 * `guides`: guias práticos sobre as ferramentas mais utilizadas em MLOps.
-    * [Linux](./docs/linux.md)
-    * [Git](./docs/git.md)
-    * [Docker](./docs/docker.md)
-    * [Kubernetes](./docs/kubernetes.md)
-    * [Terraform](./docs/terraform.md)
-    * [Google Cloud Platform (GCP)](./docs/gcp.md)
+    * [Linux](./guides/linux.md)
+    * [Git](./guides/git.md)
+    * [Docker](./guides/docker.md)
+    * [Kubernetes](./guides/kubernetes.md)
+    * [Terraform](./guides/terraform.md)
+    * [Google Cloud Platform (GCP)](./guides/gcp.md)
 * `scripts`: códigos em linguagem Python para ampliação dos conhecimentos contidos nos guias.
 * `data`: dados de exemplo para utilização nas demonstrações práticas.
 * `assets`: recursos de suporte didático.
