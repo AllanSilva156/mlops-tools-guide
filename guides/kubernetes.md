@@ -1,0 +1,3 @@
+# Introdução
+
+Kubernetes é uma plataforma de orquestração de contêineres que se tornou essencial para a implementação escalável e gerenciamento de aplicações de aprendizado de máquina em produção. Ele automatiza a implantação, escalonamento e operação de contêineres, permitindo que os engenheiros de MLOps gerenciem grandes clusters de forma eficiente. Kubernetes facilita a resiliência e a alta disponibilidade dos serviços de machine learning, garantindo que os modelos estejam sempre acessíveis e possam se adaptar dinamicamente às mudanças na demanda. Conhecer Kubernetes é vital para qualquer profissional de MLOps que deseja garantir a estabilidade e escalabilidade de seus modelos em ambientes de produção.

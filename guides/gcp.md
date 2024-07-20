@@ -1,0 +1,3 @@
+# Introdução
+
+O Google Cloud Platform (GCP) oferece um conjunto robusto de serviços e ferramentas que são extremamente valiosos para MLOps. Com GCP, os engenheiros de machine learning podem acessar poderosos recursos de computação, armazenamento e serviços de machine learning gerenciados, como o AI Platform. Esses serviços facilitam o desenvolvimento, treinamento e implantação de modelos em escala, permitindo uma integração perfeita com pipelines de CI/CD. Além disso, GCP oferece ferramentas de monitoramento e gerenciamento que ajudam a garantir a performance e a confiabilidade dos modelos em produção. Dominar o uso do GCP é essencial para qualquer profissional de MLOps que busca aproveitar ao máximo as capacidades da nuvem para seus projetos de machine learning.

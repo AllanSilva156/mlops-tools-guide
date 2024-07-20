@@ -1,0 +1,3 @@
+# Introdução
+
+O Docker é uma ferramenta indispensável em MLOps por sua capacidade de criar ambientes isolados e reproduzíveis para desenvolvimento, teste e produção de modelos de aprendizado de máquina. Com Docker, os engenheiros podem empacotar aplicações e suas dependências em contêineres, garantindo que os modelos funcionem de forma consistente em qualquer ambiente. Isso é particularmente importante ao mover modelos entre diferentes fases do pipeline de MLOps, desde o desenvolvimento local até a produção em escala. Docker também facilita o escalonamento de aplicações, permitindo a implantação rápida e eficiente de múltiplos contêineres em ambientes de nuvem ou on-premises.

@@ -1,0 +1,3 @@
+# Introdução
+
+Terraform é uma ferramenta de infraestrutura como código (IaC) que permite aos profissionais de MLOps definir, provisionar e gerenciar a infraestrutura necessária para suportar o ciclo de vida de modelos de aprendizado de máquina. Utilizando arquivos de configuração, os engenheiros podem descrever a infraestrutura desejada e utilizar o Terraform para implementar e manter essa infraestrutura de forma consistente. Isso inclui a criação de ambientes de desenvolvimento, configuração de pipelines de CI/CD, e a provisão de recursos de nuvem necessários para treinar e servir modelos. A habilidade de usar Terraform é crucial para automatizar e versionar a infraestrutura, garantindo que os ambientes possam ser reproduzidos e escalados conforme necessário.
