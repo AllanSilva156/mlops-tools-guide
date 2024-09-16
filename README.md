@@ -41,5 +41,5 @@ O repositório está organizado nas seguintes seções:
 Obrigado por visitar este repositório e espero que os recursos aqui disponíveis sejam úteis na sua jornada com MLOps. Sinta-se à vontade para contribuir com sugestões, melhorias ou novos tutoriais!
 
 ## Referências
-- [Curso Terminal - Alura](https://www.alura.com.br/conteudo/terminal-comandos-executar-tarefas?srsltid=AfmBOopdbWliGrnF-XA-PL6vzjDdC7aNkTZuZGiSYphL_QDFv9dbkEhI)
-- [Curso Git - Código Fonte TV](https://youtu.be/ts-H3W1uLMM?si=do6yuXbZFd_khJcX)
+- [Curso Terminal - Alura](https://cursos.alura.com.br/course/terminal-comandos-executar-tarefas)
+- [Mini Curso Git - Código Fonte TV](https://youtu.be/ts-H3W1uLMM?si=do6yuXbZFd_khJcX)
