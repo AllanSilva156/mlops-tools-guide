@@ -89,7 +89,7 @@ Para ver as diferenças existentes nos arquivos contidos na staging area.
 git diff --stagged
 ```
 
-Para remover arquivos da staging area se necessário.
+Para remover arquivos da staging area mantendo o conteúdo.
 ```bash
 git reset <nome-arquivo>
 ```
@@ -133,7 +133,12 @@ git commit -a -m "mensagem de commit"
 
 Para ajustar o último commit sem criar um novo.
 ```bash
-git commit --amend -m "mensagem de commit"
+git commit --amend -m "nova mensagem de commit"
+```
+
+Para criar um novo commit que desfaz as alterações do commit especificado.
+```bash
+git revert <hash-commit>
 ```
 
 Para visualizar o histórico de commits.
@@ -164,6 +169,11 @@ git checkout <nome-branch>
 Para criar e mudar para um nova branch.
 ```bash
 git checkout -b <nome-branch>
+```
+
+Para descartar as alterações no diretório de trabalho.
+```bash
+git checkout -- <nome-arquivo>
 ```
 
 ### No Central Repository (Remote)
@@ -208,5 +218,3 @@ git merge <nome-outra-branch>
 ```
 
 **OBS:** Em caso de conflitos de versões, é possível resolvê-las diretamente nos editores de código, como o Visual Studio Code.
-
-
