@@ -17,6 +17,8 @@ O repositório está organizado nas seguintes seções:
 * `guides`: guias práticos sobre as ferramentas mais utilizadas em MLOps.
     * [Linux](./guides/linux.md)
     * [Git](./guides/git.md)
+    * [API em Python](./guides/api-python.md)
+    * [MLflow](./guides/mlflow.md)
     * [Docker](./guides/docker.md)
     * [Kubernetes](./guides/kubernetes.md)
     * [Terraform](./guides/terraform.md)
@@ -29,6 +31,8 @@ O repositório está organizado nas seguintes seções:
 <div style="display: inline_block">
     <img align="center" alt="Logo Linux" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
     <img align="center" alt="Logo Git" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+    <img align="center" alt="Logo Python" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+    <img align="center" alt="Logo MLflow" height="40" width="40" src="./assets/mlflow-logo.svg" />
     <img align="center" alt="Logo Docker" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
     <img align="center" alt="Logo Kubernetes" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" />
     <img align="center" alt="Logo Terraform" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" />
@@ -43,3 +47,4 @@ Obrigado por visitar este repositório e espero que os recursos aqui disponívei
 ## Referências
 - [Curso Terminal - Alura](https://cursos.alura.com.br/course/terminal-comandos-executar-tarefas)
 - [Mini Curso Git - Código Fonte TV](https://youtu.be/ts-H3W1uLMM?si=do6yuXbZFd_khJcX)
+- [API no Python - Hashtag Treinamentos](https://youtu.be/eel1OVIdfUw?si=dWTVjoznb5Zr0zsG)
