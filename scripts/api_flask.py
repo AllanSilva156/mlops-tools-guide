@@ -17,7 +17,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Escolhendo o modelo a ser utilizado
-GPT_MODEL = "gpt-3.5-turbo"
+GPT_MODEL = "gpt-4o-mini"
 
 # Configurando o endpoint para geração de conteúdo via API da OpenAI
 @app.route('/generate', methods=['POST'])

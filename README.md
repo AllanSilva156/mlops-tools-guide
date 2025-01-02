@@ -48,3 +48,4 @@ Obrigado por visitar este repositório e espero que os recursos aqui disponívei
 - [Curso Terminal - Alura](https://cursos.alura.com.br/course/terminal-comandos-executar-tarefas)
 - [Mini Curso Git - Código Fonte TV](https://youtu.be/ts-H3W1uLMM?si=do6yuXbZFd_khJcX)
 - [API no Python - Hashtag Treinamentos](https://youtu.be/eel1OVIdfUw?si=dWTVjoznb5Zr0zsG)
+- [Curso Docker - Alura](https://www.alura.com.br/curso-online-docker-criando-gerenciando-containers)
