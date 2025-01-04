@@ -51,121 +51,230 @@ No macOS, você pode acessar o [link](https://www.docker.com/products/docker-des
 ## Comandos Docker
 
 1. Realizar o download de uma imagem específica:
-
 ```bash
 docker image pull nome_da_imagem
 ```
 
 2. Verifica todas as imagens que foram baixadas:
-
 ```bash
 docker images
 ``` 
 
 3. Cria o contêiner de uma imagem específica:
-
 ```bash
-docker container create -i -t --name nome_do_container nome_da_imagem
+docker container create -i -t --name nome_do_conteiner nome_da_imagem
 ```
 
 4. Lista todos os contêineres existentes:
-
 ```bash
 docker container ls -a
 ```
 
 5. Inicia o contêiner criado:
-
 ```bash
 docker container start -i -a nome_do_conteiner
 ```
 
 6. Encerra a execução de um contêiner:
-
 ```bash
 docker container stop nome_do_conteiner
 ```
 
 7. Exclui um contêiner:
-
 ```bash
 docker container rm nome_do_conteiner
 ``` 
 
 8. Realiza os passos 1, 3 e 5 de uma vez só:
-
 ```bash
-docker run -ti --name nome_do_conteiner nome_da_imagem /bin/bash
+docker run -it --name nome_do_conteiner nome_da_imagem bash
 ``` 
 
 9. Executa um contêiner e, em seguida, remove ele
-
 ```bash
-docker run -ti --rm --name nome_do_conteiner nome_da_imagem /bin/bash
+docker run -it --rm --name nome_do_conteiner nome_da_imagem bash
 ``` 
 
 10. Executa um contêiner em segundo plano (em outro terminal):
-
 ```bash
-docker run -d -ti --name nome_do_conteiner nome_da_imagem /bin/bash
+docker run -d -it --name nome_do_conteiner nome_da_imagem bash
 ``` 
 
 11. Vincular novamente a execução do contêiner ao terminal principal:
-
 ```bash
 docker attach nome_do_conteiner
 ```
 
 12. Copia um volume (conjunto de dados) de um diretório da máquina host (/home/user/dados) para um diretório do contêiner (/home/container/dados):
-
 ```bash
-docker run -ti -v /home/user/dados:/home/container/dados --name nome_do_conteiner nome_da_imagem /bin/bash
+docker run -it -v /home/user/dados:/home/container/dados --name nome_do_conteiner nome_da_imagem bash
 ```
 
 13. Sobe um servidor da porta 80 da máquina host para a porta 8080 do contêiner:
-
 ```bash
-docker run -ti --rm -p 8080:80 nome_da_imagem
+docker run -it --rm -p 8080:80 nome_da_imagem
+```
+
+14. Sobe um servidor realizando um mapeamento automático entre a porta da máquina host e a porta do contêiner:
+```bash
+docker run -it --rm -P nome_da_imagem
 ``` 
 
-14. Limita o uso de memória de um contêiner (500 MB no exemplo):
-
+15. Imprime o mapeamento atual de portas do contêiner especificado:
 ```bash
-docker run -ti -m 500M --name nome_do_conteiner nome_da_imagem /bin/bash
+docker port nome_do_conteiner
+```
+
+16. Limita o uso de memória de um contêiner (500 MB no exemplo):
+```bash
+docker run -it -m 500M --name nome_do_conteiner nome_da_imagem bash
 ``` 
 
-15. Limita o uso de CPU de um contêiner (2 cores no exemplo):
-
+17. Limita o uso de CPU de um contêiner (2 cores no exemplo):
 ```bash
-docker run -ti -c 2 --name nome_do_conteiner nome_da_imagem /bin/bash
+docker run -it -c 2 --name nome_do_conteiner nome_da_imagem bash
+```
+
+18. Imprime os logs de execução de um determinado contêiner:
+```bash
+docker logs nome_do_conteiner
+```
+
+19. Constrói uma imagem de acordo com o que foi especificado no Dockerfile existente no diretório atual:
+```bash
+docker build --name nome_da_imagem .
 ``` 
 
-16. Constrói uma imagem de acordo com o que foi especificado no Dockerfile existente no diretório ./
-
+20. Interrompe e exclui um determinado contêiner em um único passo:
 ```bash
-docker build --name nome_da_imagem ./
-``` 
+docker rm -f nome_do_conteiner
+```
 
-17. Realiza o commit (Docker Hub) de alguma modificação em uma imagem existente:
-
+21. Interrompe a execução de todos os contêineres em uso:
 ```bash
-docker commit nome_da_imagem_original nome_da_imagem_alterada
-``` 
+docker stop $(docker ps -q)
+```
 
-18. Salva um arquivo compactado de imagens:
-
+22. Interrompe a execução e exclui os contêineres existentes:
 ```bash
-docker save -o minhas_imagens.zip <imagem_1> <imagem_2> ... <imagem_n>
-```  
+docker rm -f $(docker ps -q)
+```
 
-19. Faz o upload de um arquivo compactado de imagens:
-
-```bash
-docker load -i minhas_imagens.zip
-```  
-
-20. Exclui uma imagem baixada:
-
+23. Exclui uma imagem baixada:
 ```bash
 docker rmi nome_da_imagem
+```
+
+24. Exclui todas as imagens baixadas:
+```bash
+docker rmi $(docker images -q)
+```
+
+25. Remove todos os contêineres parados:
+```bash
+docker container prune
+```
+
+26. Remove todas as imagens não utilizadas, incluindo as que não estão associadas a contêineres parados:
+```bash
+docker image prune -a
+```
+
+27. Realizar o login do Docker Hub:
+```bash
+docker login -u nome_do_usuario
+```
+
+28. Realizar o envio de uma imagem local para o Docker Hub:
+```bash
+docker push nome_da_imagem
+```
+
+29. Realiza o commit de alguma modificação em uma imagem existente para o Docker Hub:
+```bash
+docker commit nome_da_imagem_original nome_da_imagem_alterada
+```
+
+30. Lista todos os volumes disponíveis:
+```bash
+docker volume ls
 ``` 
+
+31. Cria um determinado volume:
+```bash
+docker volume create nome_do_volume
+```
+
+32. Associa o volume criado à execução de um determinado contêiner:
+```bash
+docker run -it -v nome_do_volume:diretorio_do_conteiner --name nome_do_conteiner nome_da_imagem bash
+```
+
+33. Lista todas as redes disponíveis:
+```bash
+docker network ls
+```
+
+34. Cria uma determinada rede:
+```bash
+docker network create --driver bridge nome_da_rede
+```
+
+35. Associa a rede criada à execução de um determinado contêiner:
+```bash
+docker run -it --network nome_da_rede --name nome_do_conteiner nome_da_imagem bash
+```
+
+## Utilizando o Docker Compose para coordenar contêineres
+
+No Windows, o Docker Compose já está incluído na instalação do Docker Desktop. Após instalar o Docker Desktop, você pode usar o comando `docker compose` diretamente no terminal.
+
+No Linux, a instalação ocorre através da execução do comando abaixo:
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+Em seguida, é necessário aplicar permissões de execução (+x) ao binário que acabou de ser baixado.
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+No macOS, o Docker Compose também está incluído na instalação do Docker Desktop. Basta instalar o Docker Desktop e utilizar o comando `docker compose` no terminal.
+
+Se preferir uma instalação manual, use o Homebrew:
+```bash
+brew install docker-compose
+```
+
+Após a instalação, você pode criar um arquivo `docker-compose.yml` para definir e coordenar seus serviços. Por exemplo:
+
+```yaml
+version: '3.8'
+services:
+  app:
+    image: nginx
+    ports:
+      - "8080:80"
+```
+
+**OBS:** Os parâmetros possíveis para o arquivo `docker-compose.yml` podem ser consultados na [documentação oficial](https://docs.docker.com/reference/compose-file/)
+
+Para iniciar os serviços definidos no arquivo, execute dentro do diretório no qual está o arquivo `docker-compose.yml`:
+```bash
+docker-compose up
+``` 
+
+Para iniciar os serviços em segundo plano:
+```bash
+docker-compose up -d
+```
+
+Para verificar os serviços em execução:
+```bash
+docker-compose ps
+```
+
+Para interromper e excluir os serviços:
+```bash
+docker-compose down
+```
